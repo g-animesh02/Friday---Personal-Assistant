@@ -13,6 +13,7 @@ This program can perform various daily life operations like telling time, date, 
 This program contains two inbuilt python voices(Male and Female).
 We can change the names of our assistant(By default Male voice is Bruce and Female voice is Sofia)
 
+COMMANDS THAT CAN BE USED-
 1. For time - "current time please"
 2. For the date - "today's date"
 3. For general greetings - use "Hello" with the assistant's name
