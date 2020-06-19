@@ -433,34 +433,43 @@ if __name__ == "__main__":
     wish_me()
     while True:
         query = takeCommand().lower()
-
+   # for time - "current time please"
         if ' time' in query:
             time()
+        # for date - "today's date"
         elif ' date' in query:
             today_date()
+        # for day
         elif ' day' in query:
             day_name()
+        # for general greetings - use "Hello" with assistant's name
         elif ('hello' in query or 'hi' in query or "what's up" in query) and name in query:
             speak("Hello Sir")
             speak("i'm fine sir what I must do for you")
+        # About assistant - "About Yourself"
         elif ' about' in query or 'who are u' in query or '':
             if ' yourself' in query:
                 speak("that's a secret")
                 speak("Can't tell u that")
-                speak("Simply can tell that My master is Aniemesh")
+            # about your master
             elif 'master' in query or 'an':
                 master_animesh()
+        # for wikipedia or google search - use "What is" or "Search"
         elif 'search' in query or 'what is' in query:
             wiki_google(query)
+        # to shutdown, restart, logout or lock screen - use desired operation with screen or windows
         elif (
                 'shutdown' in query or 'restart' in query or 'logout' in query or 'lockscreen' in query or 'lock screen' in query or 'lock' in query) and (
                 'system' in query or 'windows' in query or 'screen' in query):
             shutdown_restart(query)
+        # for playing songs - "play songs" or "play music"
         elif 'play' in query and ('songs' in query or 'song' in query or 'music' in query or 'musics' in query):
             play_songs()
+        # try saying "Fu*k You" ;)
         elif 'f*** you' in query:
             speak("Fuck you back")
             speak("Don't abuse sir")
+        # to shutdown assistant - use "switch off" or "shutdown" with name of assistant
         elif (
                 'switch off' in query or 'shutdown' in query or 'f*** of' in query or 'f*** off' in query or 'bye' in query) and name in query:
             print(name)
@@ -477,19 +486,23 @@ if __name__ == "__main__":
                 rem = open('name0.txt', 'r')
                 speak("he is! " + rem.read())
                 print(rem.read())
+        # Asking assistant to remember something - use "Remember" with name of assistant
         elif 'remember' in query:
             if name in query and 'folder' not in query:
                 remember_jarvis()
+            # to check remembered folder - use "remember folder"
             elif 'folder' in query:
                 open_remember()
             else:
                 speak("Sorry Sir!")
                 speak("Either i got u wrong or i Can't do that")
+        # to change name of assistant - use "change" and current name of assistant
         elif name in query and 'change' in query:
             if i == 0:
                 name0()
             elif i == 1:
                 name1()
+        # Asking current name of assistant - "Your name please"
         elif 'your' in query and 'name' in query:
             if i == 0:
                 rem = open('name0.txt', 'r')
@@ -497,6 +510,7 @@ if __name__ == "__main__":
             else:
                 rem = open('name1.txt', 'r')
                 speak("I am " + rem.read())
+        # to call other assistant - use "call" and other assistant's name
         elif 'call' in query or 'cal' in query:
             rem = open('name0.txt', 'r')
             rem1 = open('name1.txt', 'r')
@@ -514,6 +528,7 @@ if __name__ == "__main__":
             else:
                 speak("Who is this person?")
                 speak("Are you hiring some new Assistant? Sir")
+        # To make assistant wait for you - use "wait" with assistant's name
         elif 'wait' in query and name in query:
             speak("I will be ready")
             speak("When you r ready")
@@ -529,7 +544,8 @@ if __name__ == "__main__":
                 s = s.lower()
             if s == 'yes':
                 speak("Welcome back sir!")
-        elif 'news for today' in query:
+        # for today's news - "Today's news"
+        elif "today's news" in query or 'news for today' in query:
             new_today()
         elif query != 00:
             speak("Sorry Sir!")
