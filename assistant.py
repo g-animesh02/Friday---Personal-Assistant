@@ -149,8 +149,9 @@ def wiki_google(query):
             query3 = query3.lower()
             print(query3)
             if 'yes' in query3 or 'go' in query3 or 'why not' in query3:
+                #todo enter your location for chrome.exe
                 chromepath = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s"
-                url = "https: // www.youtube.com / results?search_query =" + str(query3).replace(" ", "-")
+                url = "https://www.google.com/search?q =" + str(query3).replace(" ", "+")
                 webbrowser.get(chromepath).open_new_tab(url)
                 speak("Are you done Sir?")
                 inp = input("done? Yes or No: ")
