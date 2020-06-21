@@ -8,7 +8,7 @@ The program uses internet connection to run prfectly.
 4.pip install google
 5.pip install pywin32
 6.pip install pyAudio
-
+7.pip install lxml
 After installing these libraries, we can run our program.
 This program can perform various daily life operations like telling time, date, day, can play music, can search anything on Wikipedia or Google, it can wait for your instructions, can tell current news, can remember things for you and many more
 
